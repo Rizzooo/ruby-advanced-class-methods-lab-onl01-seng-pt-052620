@@ -29,8 +29,8 @@ class Song
   end
   
   def self.find_by_name(name)
-    song = self.all.select {|song| song.name == name}
-    song [0]
+    answer = self.all.select {|song| song.name == name}
+    answer[0]
   end
   
   def self.find_or_create_by_name(name)
@@ -39,8 +39,8 @@ class Song
         answer
       else
         self.create_by_name
+        self
       end
-    answer
   end
   
 
