@@ -40,10 +40,7 @@ class Song
     end
   end
   
-  def self.alphabetical
-    songs = self.all
-    songs.sort_by {|song| song.name}
-  end
+  
   
     def self.new_from_filename(filename)
     song_data = filename.sub!(/.mp3/,'').split(' - ')
