@@ -18,19 +18,19 @@ class Song
   
   def self.new_by_name(name)
     title = self.new
-    song_title.name = name
-    song_title
+    title.name = name
+    title
   end
   
-  def self.create_by_name(song_name)
+  def self.create_by_name(name)
     song = self.create
-    song.name = song_name
+    song.name = name
     song
   end
   
-  def self.find_by_name(song_name)
-    answer = self.all.select {|x| x.name == song_name}
-    answer[0]
+  def self.find_by_name(name)
+    answer = self.all.detect {|song| song.name == name}
+    answer
   end
   
   def self.find_or_create_by_name
