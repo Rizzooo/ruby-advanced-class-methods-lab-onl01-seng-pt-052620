@@ -41,7 +41,7 @@ class Song
   end
   
   def self.alphabetical
-    in_order = self.all.sort_by(&:name)
+    in_order = @@all.sort_by(&:name)
     in_order
   end
   
