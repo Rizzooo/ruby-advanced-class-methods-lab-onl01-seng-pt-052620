@@ -33,8 +33,8 @@ class Song
     answer
   end
   
-  def self.find_or_create_by_name
-    answer = self.find_by_name(song_name)
+  def self.find_or_create_by_name(name)
+    answer = self.find_by_name(name)
       if answer
         answer
       else
