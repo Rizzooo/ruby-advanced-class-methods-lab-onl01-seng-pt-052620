@@ -17,12 +17,30 @@ class Song
   end
   
   def self.new_by_name(song_name)
-    self.new.name = song_name
-    self.new
+    song_title = self.new
+    song_title.name = song_name
+    song_title
   end
   
-  def self.create_by_name
-    
+  def self.create_by_name(song_name)
+    song = self.create
+    song.name = song_name
+    song
   end
+  
+  def self.find_by_name(song_name)
+    answer = self.all.detect {|x| x.name == song_name}
+    answer
+  end
+  
+  def self.find_or_create_by_name
+    answer = self.find_by_name(song_name)
+      if the_song
+        the_song
+      else
+        self.create_by_name
+      end
+  end
+  
 
 end
