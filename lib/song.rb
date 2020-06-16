@@ -41,7 +41,7 @@ class Song
   end
   
   def
-    self.all.sort_by {|name| name.name = name[0]
+    self.all.sort_by {|song| song.name[0]}
   end
   
 
