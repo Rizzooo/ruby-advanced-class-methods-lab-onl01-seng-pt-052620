@@ -40,7 +40,7 @@ class Song
     end
   end
   
-  def
+  def self.alphabetical
     self.all.sort_by {|song| song.name[0]}
   end
   
